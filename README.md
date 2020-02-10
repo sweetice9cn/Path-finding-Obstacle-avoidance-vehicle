@@ -19,14 +19,40 @@ Nov, 2019- Dec, 2019
 <h3>Implemented functions</h3>
 <p>car movement</br>
 <ul>
-	<li>void moveForward(), void moveBackward()</br>
+	<li>void moveForward(), void moveBackward():</br>
 		move car forward/backward, using delay() to control moving distance
 	</li>
-	<li>void turnLeft(), void turnRight()</br>
+	<li>void turnLeft(), void turnRight():</br>
 		move car forward/backward, using delay() to control moving distance
 	</li>
-	<li>void turnLeftUnit(), void turnRightUnit()</br>
+	<li>void turnLeftUnit(), void turnRightUnit():</br>
 		turn car 30 degrees left/right for fine-grained beacon finding, using delay() to control turning degrees
 	</li>
 </ul></p>
+
 <p>Signal strength (RSSI) measurement</br>
+<ul>
+	<li>int calAvgRSSI(int num):</br>
+		calculate avg RSSI signal, using num to specify how many RSSI signal to be used for computing the average (num = 120 for current implementation).
+	</li>
+</ul></p>
+
+<p>Obstacle detection</br>
+<ul>
+	<li>int calDistance(int echoPin):</br>
+		calculate measured distance in cm from the ultrasonic sensor, using echoPin to specify either front/right sensor
+	</li>
+	<li>int calAvgDistance(int echoPing, int num):</br>
+		calculate avg distance in cv from the ultrasonic sensor, using num for specifying the number of data for computing the average.
+	</li>
+</ul></p>
+
+<p>Find beacon</br>
+<ul>
+	<li>void findDirection( ):</br>
+		Find the coarse direction of the beacon (4 directions, turn 90 degrees each).
+	</li>
+	<li>void findDirectionFine( ):</br>
+		Find the find-grained direction for the beacon, (3 directions, turn around 30 degrees each).
+	</li>
+</ul>
