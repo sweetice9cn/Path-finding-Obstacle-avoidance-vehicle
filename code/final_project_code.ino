@@ -1,11 +1,3 @@
-/*
- *  final_project_car.ino
- *  Group 8
- *  Team 3
- *  Po-Jung Wu (pjw335)
- *  Xintong Song (xs708)
- */
-
 #include <ESP8266WiFi.h>
 
 // for motor
